@@ -1,5 +1,5 @@
 import { ThemeProvider, createTheme } from "@mui/material";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useDarkMode } from "usehooks-ts";
 export default function AppThemeProvider({
   children,
@@ -7,6 +7,7 @@ export default function AppThemeProvider({
   children: React.ReactNode;
 }) {
   const { isDarkMode } = useDarkMode();
+  useEffect(() => console.log("isDarkMode", isDarkMode), [isDarkMode]);
   const theme = useMemo(() => {
     console.log("createTheme()");
 

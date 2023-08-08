@@ -1,10 +1,8 @@
 import { Button, Stack, Typography } from "@mui/material";
-import { useEffect } from "react";
 import { useDarkMode } from "usehooks-ts";
 import Grid from "@mui/material/Unstable_Grid2";
 export default function Buttons() {
-  const { isDarkMode, toggle } = useDarkMode(undefined);
-  useEffect(() => console.log("isDarkMode", isDarkMode), [isDarkMode]);
+  const { toggle } = useDarkMode();
   return (
     <Stack spacing={3}>
       <Typography variant="h5">Button</Typography>

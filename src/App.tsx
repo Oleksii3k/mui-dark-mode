@@ -1,5 +1,4 @@
 import { Box, Button, CssBaseline, Typography } from "@mui/material";
-import "./App.css";
 import Buttons from "./Buttons";
 import { useDarkMode } from "usehooks-ts";
 import Texts from "./Texts";
